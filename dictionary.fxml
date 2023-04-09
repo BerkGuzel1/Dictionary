@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="vbox" fx:controller="com.example.mdattempt2.DictionaryController">
+  <padding>
+    <Insets top="10" right="10" bottom="10" left="10" />
+  </padding>
+  <GridPane hgap="10" vgap="10">
+    <Label text="Search word:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="searchTextField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <Button text="Search" onAction="#searchForWord" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+  </GridPane>
+  <TextArea fx:id="translationTextArea" wrapText="true" />
+  <ListView fx:id="wordListView" />
+  <Button text="Edit" onAction="#editWord" />
+  <Button text="Load Dictionary" onAction="#loadDictionaryFromFile" />
+  <Button text="Save Dictionary" onAction="#saveDictionaryToFile" />
+</VBox>
